@@ -16,6 +16,8 @@ function fizzBuzz(n) {
   
     return answer;
 }
+
+console.log(fizzBuzz(15));
   
  
   
@@ -50,8 +52,8 @@ function fizzBuzz(n) {
 // Question 5
 // ascending
 function ascendingSort(arr) {
-    const compareAscending = (a, b) => a - b;
-    return arr.slice().sort(compareAscending);
+    const myAscending = (a, b) => a - b;
+    return arr.slice().sort(myAscending);
 }
   
 const unsortedArrayA = [3, 1, 4, 1, 5, 9, 2, 6, 5];
@@ -60,8 +62,8 @@ const sortedAscending = ascendingSort(unsortedArray);
 
 // descending
 function descendingSort(arr) {
-    const compareDescending = (a, b) => b - a;
-    return arr.slice().sort(compareDescending);
+    const myDescending = (a, b) => b - a;
+    return arr.slice().sort(myDescending);
 }
 
 const unsortedArrayD = [3, 1, 4, 1, 5, 9, 2, 6, 5];
