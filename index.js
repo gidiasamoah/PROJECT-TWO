@@ -52,19 +52,19 @@ console.log(fizzBuzz(15));
 // Question 5
 // ascending
 function ascendingSort(arr) {
-    const myAscending = (a, b) => a - b;
+    const myAscending = (x, y) => x - y;
     return arr.slice().sort(myAscending);
 }
   
 const unsortedArrayA = [3, 1, 4, 1, 5, 9, 2, 6, 5];
-const sortedAscending = ascendingSort(unsortedArray);
+const sortedAscending = ascendingSort(unsortedArrayA);
 
 
 // descending
 function descendingSort(arr) {
-    const myDescending = (a, b) => b - a;
+    const myDescending = (x, y) => y - x;
     return arr.slice().sort(myDescending);
 }
 
 const unsortedArrayD = [3, 1, 4, 1, 5, 9, 2, 6, 5];
-const sortedDescending = descendingSort(unsortedArray);
+const sortedDescending = descendingSort(unsortedArrayD);
