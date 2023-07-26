@@ -36,7 +36,8 @@ console.log(fizzBuzz(15));
 
 //b. Promises:
 //Promises are a way of handling asynchronous operations in JavaScript.  
-//Promises provide a neat way to deal with this uncertainty. A promise represents the eventual completion (or failure) of an asynchronous task and acts as a placeholder for the result. It can be in three states: pending, fulfilled, or rejected. With promises, you can attach callback functions to be executed when the promise is resolved or rejected, allowing you to handle the results and errors in a structured and readable way.
+//Promises provide a neat way to deal with this uncertainty. A promise represents the eventual completion (or failure) of an asynchronous task and acts as a placeholder for the result. 
+//It can be in three states: pending, fulfilled, or rejected. 
 
 //c. Object-Oriented Programming (OOP):
 //Object-Oriented Programming (OOP) is a programming paradigm centered around the concept of objects. 
