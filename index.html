@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project-2</title>
+</head>
+<body><!DOCTYPE html>
+    <html>
+    <head>
+        <title>Form Example</title>
+    </head>
+    <body>
+        <form id="myForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" required><br>
+    
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" required><br>
+    
+            <label for="age">Age:</label>
+            <input type="number" id="age" required><br>
+    
+            <label for="country">Country:</label>
+            <select id="country" required>
+                <option value="">Select a country</option>
+                <option value="Ghana">Ghana</option>
+                <option value="USA">USA</option>
+                <option value="Germany">Germany</option>
+                <option value="Australia">Australia</option>
+                <option value="Togo">Togo</option>
+            </select><br>
+    
+            <label for="picture">Picture:</label>
+            <input type="file" id="picture" required><br>
+    
+            <button type="button" onclick="handleSubmit()">Submit</button>
+        </form>
+    
+        <div id="output"></div>
+    
+        <script>
+            class FormHandler {
+                async validateForm() {
+                    const form = document.getElementById("myForm");
+                    if (form.checkValidity()) {
+                        // All fields are filled
+                        return true;
+                    } else {
+                        // Display the validation error messages
+                        form.reportValidity();
+                        return false;
+                    }
+                }
+    
+                generateSentence(firstName, lastName, age, country) {
+                    return `My name is ${firstName} ${lastName}. I am from ${country}. I am ${age} years old.`;
+                }
+            }
+    
+            async function handleSubmit() {
+                const firstName = document.getElementById("firstName").value;
+                const lastName = document.getElementById("lastName").value;
+                const age = document.getElementById("age").value;
+                const country = document.getElementById("country").value;
+    
+                const formHandler = new FormHandler();
+    
+                if (await formHandler.validateForm()) {
+                    const sentence = formHandler.generateSentence(firstName, lastName, age, country);
+                    document.getElementById("output").innerText = sentence;
+                }
+            }
+        </script>
+    </body>
+    </html>
+    
+
+    
+</body>
