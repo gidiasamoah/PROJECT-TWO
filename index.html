@@ -9,7 +9,7 @@
 <body><!DOCTYPE html>
     <html>
     <head>
-        <title>Form Example</title>
+        <title>Form</title>
     </head>
     <body>
         <form id="myForm">
@@ -45,10 +45,10 @@
                 async validateForm() {
                     const form = document.getElementById("myForm");
                     if (form.checkValidity()) {
-                        // All fields are filled
                         return true;
+                    
                     } else {
-                        // Display the validation error messages
+                        
                         form.reportValidity();
                         return false;
                     }
